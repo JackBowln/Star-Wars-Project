@@ -4,6 +4,13 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./shared/**/*.{js,ts,jsx,tsx}",
   ],
+  
+  safelist: [
+    'text-3xl',
+    {
+      pattern: /bg-(yellow|green|blue|gray)-(100|200|300|400|700)/,
+    },
+  ],
   theme: {
     colors: {
       transparent: 'transparent',

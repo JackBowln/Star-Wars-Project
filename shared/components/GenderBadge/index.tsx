@@ -3,18 +3,20 @@ interface Props {
 }
 
 const index = (props: Props) => {
-  let textColor= "blue-700"
-  let bgColor = "blue-100"
+  let textColor= "text-blue-700"
+  let bgColor = "bg-blue-100"
   if(props.gender === 'male') {
-    textColor= "green-700"
-    bgColor = "green-100"
+    textColor= "text-green-700"
+    bgColor = "bg-green-100"
   } else if(props.gender === 'female') {
-    textColor= "yellow-400"
-    bgColor = "yellow-100"
+    textColor= "text-yellow-400"
+    bgColor = "bg-yellow-100"
   } 
   
   return (
-    <div className={"bg-"+bgColor+" text-"+textColor+" px-3 py-1 rounded-xl"}>{props.gender}</div>
+    <div className="w-auto">
+      <div className={bgColor+" "+textColor+" px-3 py-1 rounded-xl"}>{props.gender}</div>
+    </div>
   )
 }
 
